@@ -21,6 +21,4 @@ if __name__ == "__main__":
     persona2=Persona.from_json(persona1.to_json())
     print(persona2.to_json())
 #cual es el error?
-#porque necesita si o si el decordadoadsr?sadasa
-
-    
+#porque necesita si o si el decordadoadsr?sad
