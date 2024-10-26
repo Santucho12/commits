@@ -1,0 +1,20 @@
+{
+    "nombre": "Juan",
+    "edad": 30,
+    "ciudad": "Madrid",
+    "nacimiento":{
+        "dia": 1,
+        "mes": 1,
+        "ano": 1990
+    },
+    "experiencia":[
+        {"empresa":"microsoft",
+        "puesto":"programador"},
+
+        {"empresa":"google",
+        "puesto":"programador"},
+
+        {"empresa":"amazon",    
+        "puesto":"programador"}
+    ]
+}
