@@ -1,15 +1,25 @@
-.box {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    margin-top: 100px;
-    background-color: rgb(0, 255, 55);
+.body{
+    background-color: yellow;
+}
+
+.flexbox{
+    display: flex;
+    flex-direction:  column-reverse;
+}
+
+
+
+.flexbox__flex-items{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    margin: 10px;
     text-align: center;
-    transition: left 1s;
-    position: relative;
-    left: 0;
+    font-size: 27px;
+    font-family: sans-serif;
+    color: aqua;
 }
-body:hover .box{
-    left: 200px;
+.flexbox__flex-items:nth-child(2n){
+    background-color: blue;
 }
-asdass
+asdas
