@@ -1,25 +1,197 @@
-.body{
-    background-color: yellow;
-}
-
-.flexbox{
-    display: flex;
-    flex-direction:  column-reverse;
-}
-
-
-
-.flexbox__flex-items{
-    height: 50px;
-    width: 50px;
-    background-color: red;
-    margin: 10px;
-    text-align: center;
-    font-size: 27px;
+body {
+    position: relative;
     font-family: sans-serif;
-    color: aqua;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-.flexbox__flex-items:nth-child(2n){
-    background-color: blue;
+
+/* Fondo de pantalla con opacidad */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url("https://wallpaperaccess.com/full/359092.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    z-index: -1; /* Coloca el fondo detrás del contenido */
 }
-asd
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    width: 50%; /* Ancho de la barra de navegación */
+    margin: 30px auto; /* Espaciado arriba y centrado horizontalmente */
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    margin: 8px 0.3rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: 0.4s ease; /* Aumenta la duración de la transición */
+    position: relative;
+}
+
+/* Animación al hacer hover */
+.navbar a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transition: width 0.4s ease; /* Aumenta la duración de la transición */
+    border-radius: 50px;
+}
+
+.navbar a:hover::before {
+    width: 100%;
+}
+
+.navbar a:hover {
+    transform: translateY(-5px); /* Reduce la altura del desplazamiento */
+    color: #9a9ace;
+}
+
+h1 {
+    color: #283e51;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7); /* Sombra de texto */
+    width: 80%;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+/* Estilo de la tabla del menú */
+.menu {
+    width: 80%;
+    height: 600px; /* Ajusta el ancho según sea necesario */
+    margin: 20px auto; /* Centra la tabla y agrega espacio arriba */
+    border-collapse: separate; /* Permite que los bordes se separen */
+    border-spacing: 5px; /* Espaciado entre las celdas */
+    background-color: rgba(203, 202, 202, 0.1); /* Fondo blanco con opacidad */
+}
+
+.menu td {
+    text-align: center; /* Centra el texto en las celdas */
+    padding: 15px; /* Espaciado interno */
+    font-size: 1.5rem; /* Tamaño de fuente */
+    font-weight: 600;
+    color: #283e51; /* Color del texto */
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo de las celdas */
+    border: 1px solid lightgray; /* Borde gris claro de las celdas */
+    border-radius: 5px; /* Bordes redondeados para las celdas */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para las celdas de la tabla */
+.menu td:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Cambia el fondo al pasar el mouse */
+    color: #fff; /* Cambia el color del texto al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+h2 {
+    color: #2c2c2c; /* Color del texto */
+    font-family: 'Arial', sans-serif; /* Cambia a una fuente más legible */
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Margen arriba y abajo */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transiciones para el color y transformación */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2), 0 0 25px rgba(255, 255, 255, 0.5); /* Sombra del texto */
+}
+
+/* Efecto hover */
+h2:hover {
+    color: #283e51; /* Cambia a un color atractivo al pasar el mouse */
+    transform: translateY(-5px); /* Mueve ligeramente el texto hacia arriba */
+}
+
+/* Estilo de las secciones */
+section {
+    width: 80%;
+    height: 18%;
+    margin: 100px auto; /* Centra las secciones */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.3); /* Fondo con menos opacidad */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones */
+}
+
+/* Efecto hover para las secciones */
+section:hover {
+    transform: translateY(-8px); /* Eleva la sección al pasar el mouse */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4); /* Mejora la sombra */
+}
+
+/* Estilo de los apartados "Sobre Nosotros", "Servicios" y "Contacto" */
+.sobre-nosotros,
+.servicios,
+.contacto {
+    margin-bottom: 40px; /* Espacio entre las secciones */
+}
+
+/* Estilo para los enlaces en "Contacto" */
+.contacto a {
+    color: #4b79a1; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición suave */
+}
+
+.contacto a:hover {
+    color: #283e51; /* Cambia a un color atractivo al pasar el mouse */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1); /* Añade sombra al texto */
+}
+
+/* Estilo de lista para los servicios */
+.servicios ul {
+    list-style-type: disc; /* Tipo de viñeta */
+    padding-left: 20px; /* Espacio a la izquierda */
+    margin: 10px 0; /* Margen vertical */
+}
+
+/* Estilo de los párrafos en las secciones */
+section p {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    letter-spacing: 1.5px;
+    line-height:1.5;
+    font-weight: 600;
+    text-align: center; /* Tamaño de fuente */
+    margin: 10px 0; /* Margen vertical */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para los párrafos */
+section p:hover {
+    color: #012f58; /* Cambia a un color atractivo al pasar el mouse */
+}
+.subtitulo{
+    margin :190px 0 20px 0;
+}
