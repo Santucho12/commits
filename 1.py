@@ -22,4 +22,4 @@ if __name__ == "__main__":
     print(persona2.to_json())
 #cual es el error?
 
-#porque necesita si o si el decordsadasasdsadadsadsada
+#porque necesita si o si el decordsadasasdsadadsadsadaasdSA
