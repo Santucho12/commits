@@ -20,5 +20,5 @@ if __name__ == "__main__":
     print(persona1.to_json())
     persona2=Persona.from_json(persona1.to_json())
     print(persona2.to_json())
-#cual es el error?
+#cual es el error???
 
